@@ -1,0 +1,29 @@
+{
+    "name": "Focus Flow",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "A Chrome extension to improve productivity with features like Pomodoro Timer, Gamification, Focus Mode, and Reminders.",
+    "permissions": [
+        "storage",
+        "alarms",
+        "notifications",
+        "activeTab",
+        "background"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "options_page": "options.html",
+    "web_accessible_resources": [
+        {
+            "resources": ["timerNoise.wav"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

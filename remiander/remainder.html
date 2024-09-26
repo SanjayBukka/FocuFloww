@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder Extension</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Reminder Settings</h2>
+        <div class="reminder-settings">
+            <label for="reminder-text">Reminder Text</label>
+            <input type="text" id="remainder-text" placeholder="Enter reminder...">
+            <label for="reminder-time">Time (in minutes)</label>
+            <input type="number" id="remainder-time" placeholder="Set time">
+            <button id="set-remainder">Set Reminder</button>
+        </div>
+
+        <div>
+            <h3>Active Reminders</h3>
+            <ul id="active-reminders"></ul>
+        </div>
+
+        <audio id="alert-sound" src="notification.mp3" preload="auto"></audio>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

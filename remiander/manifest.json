@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Focus Flow Reminder",
+    "version": "1.0",
+    "description": "A reminder system to boost productivity.",
+    "action": {
+      "default_popup": "remainder.html"
+    },
+    "permissions": ["alarms", "notifications", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "timer-16.png",
+      "48": "timer-48.png",
+      "128": "timer-128.png"
+    },
+    "content_security_policy": {
+      "script-src": "self",
+      "object-src": "self"
+    }
+  }
+  

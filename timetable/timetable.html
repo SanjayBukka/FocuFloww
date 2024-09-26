@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable</title>
+  <link rel="stylesheet" href="timetable.css">  
+</head>
+<body>
+  <div class="container">
+    <h2>Timetable</h2>
+    <label for="timetable-date">Date:</label>
+    <input type="date" id="timetable-date" required>
+    
+    <table id="timetable">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Task</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="time" required></td>
+          <td><input type="text" placeholder="Enter task" required></td>
+          <td><input type="text" placeholder="Notes"></td>
+        </tr>
+        <tr>
+          <td><input type="time" required></td>
+          <td><input type="text" placeholder="Enter task" required></td>
+          <td><input type="text" placeholder="Notes"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="save-timetable">Save Timetable</button>
+    <button id="set-alarms">Set Alarms</button>
+  </div>
+  <script src="timetable.js"></script>  
+</body>
+</html>

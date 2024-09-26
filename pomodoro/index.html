@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <!-- Bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+  <!-- Bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/0632ae4a8f.js" crossorigin="anonymous"></script>
+  <title>Pomodoro Timer</title>
+</head>
+<body class="container card d-flex flex-column justify-content-between bg-light h-100">
+  <a href="/index.html" style="text-decoration: none; color:black;"><i class="fa-solid fa-backward" style="color: black; font-size:large;"></i>Back</a>
+  <div class="titleContainer m-1 mt-2 bg-light shadow text-center rounded p-1">
+    <div class="title text-center">Pomodoro</div>
+  </div>
+
+  <div class="clock rounded bg-light shadow m-1 d-flex justify-content-center align-items-center flex-grow-1">
+
+    <div class="timer d-flex align-items-center justify-content-center flex-column">
+      <button class="timerText btn btn-outline-dark btn-lg">
+        Start Focus
+      </button>
+      <div class="timerTime d-flex d-none">
+        <div class="mins"></div>
+        <div class="spacer">&#42889;</div>
+        <div class="secs"></div>
+      </div>
+    </div>
+    <audio src="sounds/timerNoise.wav"></audio>
+    <svg class="progress-ring">
+      <circle 
+        class="progress-ring__circle"
+        stroke-width="8"
+        fill="transparent"
+        r="100"
+        cx="50%"
+        cy="50%">
+      </circle>
+    </svg>
+  </div>
+
+  <div class="rounded m-1 mb-2 p-3 bg-light shadow">
+    <div class="buttons d-flex justify-content-evenly">
+      <button class="btn btn-primary p-3 pause" disabled>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
+          <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
+        </svg>
+      </button>
+      <button class="btn btn-success p-3 play start">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+          <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+        </svg>
+      </button>
+      <button class="btn btn-danger p-3 reset">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+          <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
